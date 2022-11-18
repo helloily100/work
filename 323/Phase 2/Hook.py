@@ -6,5 +6,5 @@ class Hook(Base):
     __tablename__ = "hook"
     hook = Column("hook", String(40), nullable=False)
     
-    def __int__(self, hook: String):
+    def __init__(self, hook: String):
         self.hook = hook

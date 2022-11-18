@@ -7,6 +7,6 @@ class Emplyoee(Base):
     name = Column("name", String(40), nullable=False)
     emplyoeeID = Column("employee_id", Integer, nullable=False)
     
-def _int_(self, name: String, employeeID: Integer):
+def _init_(self, name: String, employeeID: Integer):
     self.name = name
     self.employeeID = employeeID 

@@ -7,5 +7,5 @@ class Room(Base):
     roomNum = Column("room_num", Integer, nullable=False)
     
     
-    def __int__(self, roomNum: Integer):
+    def __init__(self, roomNum: Integer):
         self.roomNum = roomNum

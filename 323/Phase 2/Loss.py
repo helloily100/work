@@ -6,5 +6,5 @@ class Loss(Base):
     __tablename__ = "loss"
     reportLossDate = Column("report_loss_date", Date, nullable=False)
     
-    def __int__(self, reportLossDate: Date):
+    def __init__(self, reportLossDate: Date):
         self.reportLossDate = reportLossDate

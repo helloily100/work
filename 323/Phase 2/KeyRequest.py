@@ -7,7 +7,7 @@ class KeyRequest(Base):
     room = Column("room", Integer, nullable=False)
     requestDate = Column("request_date", Date, nullable=False)
     
-    def _int__ (self, room: Integer, requestDate: Date):
+    def __init__ (self, room: Integer, requestDate: Date):
         self.room = room
         self.requestDate = requestDate
         

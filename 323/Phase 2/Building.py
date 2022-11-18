@@ -6,5 +6,5 @@ class Building(Base):
     __tablename__ = "building"
     buildingName = Column("building_name", String, nullalbe=False)
     
-    def __int__(self, buildingName: String):
+    def __init__(self, buildingName: String):
         self.buildingName = buildingName

@@ -8,7 +8,7 @@ class CopyKey(Base):
     issuedDate = Column("issued_date", Date, nullable=False)
     issuedTime = Column("issued_time", Time, nullable=False)
     
-    def __int__(self, keyNumber: Integer, issuedDate: Date, issuedTime: Time):
+    def __init__(self, keyNumber: Integer, issuedDate: Date, issuedTime: Time):
         self.keyNumber = keyNumber
         self.issuedDate = issuedDate
         self.issuedTime = issuedTime

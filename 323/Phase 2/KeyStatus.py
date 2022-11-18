@@ -6,5 +6,5 @@ class KeyStatus(Base):
     __tablename__ = "key_status"
     isLoss = Column("is_loss", Boolean, nullable=False)
     
-    def __int__(self, isLoss: Boolean):
+    def __init__(self, isLoss: Boolean):
         self.isLoss = isLoss

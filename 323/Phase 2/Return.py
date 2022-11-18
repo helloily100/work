@@ -6,5 +6,5 @@ class Return(Base):
     __tablename__ = "return"
     reportReturnDate = Column("report_return_date", Date, nullable=False)
     
-    def __int__(self, reportReturnDate: Date):
+    def __init__(self, reportReturnDate: Date):
         self.reportReturnDate = reportReturnDate

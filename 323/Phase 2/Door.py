@@ -6,5 +6,5 @@ class Door(Base):
     __tablename__ = "door"
     doorType = Column("door_type", String(40), nullable=False)
     
-    def __int__(self, doorType: String):
+    def __ini__(self, doorType: String):
         self.doorType = doorType
