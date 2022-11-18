@@ -23,8 +23,6 @@ from sqlalchemy import Column, String, Integer, Float, UniqueConstraint, \
 from sqlalchemy.orm import relationship, backref
 from orm_base import Base
 
-from Student import Student
-from Section import Section
 
 if __name__ == '__main__':
     logging.basicConfig()
@@ -41,27 +39,9 @@ if __name__ == '__main__':
     # those tables for us.
     metadata.create_all(bind=engine)
 
-    s1: Student = Student(last_name="Doe", first_name="John", id=1)
-    s2: Student = Student(last_name="Doe", first_name="jane", id=2)
-    s3: Student = Student(last_name="Nguyen", first_name="Kevin", id=3)
-
-    sec1: Section = Section(department_name="CECS", course_name="323", section_number=2, semester="fall", year=2022,
-                            id=1)
-
     # Do our database work within a context.  This makes sure that the session gets closed
     # at the end of the with, much like what it would be like if you used a with to open a file.
     # This way, we do not have memory leaks.
     with Session() as sess:
-        sess.begin()
-        print("Inside the session, woo hoo.")
-        sess.add(s1)
-        sess.add(s2)
-        sess.add(s3)
-        sess.add(sec1)
-        sess.commit()
-        sec1.add_student(s1)
-        sec1.add_student(s2)
-        sec1.add_student(s3)
-        sess.commit()
 
-    print("Exiting normally.")
+
