@@ -18,6 +18,19 @@ from db_connection import Session, engine
 # that uses Base as its supertype will show up in the postgres.demo schema.
 from orm_base import metadata
 import logging
+
+from Employee import Employee
+from KeyRequest import KeyRequest
+from Door import Door
+from Room import Room
+from Building import Building 
+from CopyKey import CopyKey 
+from Hook import Hook 
+from HookLine import HookLine
+from KeyStatus import KeyStatus 
+from Return import Return 
+from Loss import Loss
+
 from sqlalchemy import Column, String, Integer, Float, UniqueConstraint, \
     Identity, ForeignKey, distinct, bindparam
 from sqlalchemy.orm import relationship, backref
